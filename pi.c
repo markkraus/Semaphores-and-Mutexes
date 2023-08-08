@@ -33,10 +33,8 @@ void *calculate_pi(void *data) {
     size_t private_count = 0;
 
     rand_state_t(randState);
-    // About this line of code: You should never do this if you care about randomness!
-    // All threads will generate the same sequence of numbers, so the randomness is fake!
-    // And the estimation of pi skewed... But... it makes it repeatable
-    seed_random(449 , &randState); // Don't change this... This makes the random numbers repeatable! And gradable!
+   
+    seed_random(449 , &randState); 
 
     for (size_t i = args->start ; i < args->end; i++ ) {
 
